@@ -27,12 +27,15 @@ public class Senha {
             } else if (senha < 0) {
                 System.out.println("- Digite números válidos!");
                 validade = false;
+                continue;
             } else if (senhaString.length() < 4) {
-                validade = false;
                 System.out.println("- Senha com menos de 4 caracteres. ");
-            } else if (senhaString.charAt(0) == '9') {
                 validade = false;
+                continue;
+            } else if (senhaString.charAt(0) == '9') {
                 System.out.println("- Senha começa com 9. ");
+                validade = false;
+                continue;
             }
             for (int i = 0; i < senhaString.length(); i++) {
                 somaSenha += senhaString.charAt(i) - '0';
@@ -41,6 +44,7 @@ public class Senha {
             if (somaSenha % 7 != 0) {
                 System.out.println("- A senha deve ser múltiplo 7.");
                 validade = false;
+                continue;
             }
             for (int i = 0; i < senhaString.length() - 1; i++) {
                 if (senhaString.charAt(i) == senhaString.charAt(i + 1)) {
@@ -52,6 +56,7 @@ public class Senha {
             if (repetido) {
                 System.out.println("- Números não podem ser repetidos sequencialmente.");
                 validade = false;
+                continue;
             }
 
 

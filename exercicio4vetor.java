@@ -9,9 +9,6 @@ public class exercicio4vetor {
 
         for (int i = 0; i < 10; i++) {
             multiplicandos[i] = i + 1;
-        }
-
-        for (int i = 0; i < 10; i++) {
             multiplicadores[i] = i + 1;
         }
         for (int i = 0; i < multiplicandos.length; i++) {
